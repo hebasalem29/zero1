@@ -1,0 +1,93 @@
+.work{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #ececec;
+    .container5{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        @media(max-width:991px)
+        {
+            flex-direction: column;
+            .image{
+                //margin-bottom: 50px;
+                margin: 0 0 50px auto;
+            }
+        }
+
+        
+        .image{
+            max-width: 100%;
+            margin-right: 100px;
+
+        }
+        .info{
+            @media(max-width:991px)
+            {
+              
+                 
+               
+                .box{
+                    flex-direction: column;
+                    text-align: center;
+                   
+                }
+            }
+            .box{
+
+                background-color: #f6f6f6;
+                margin-bottom: 20px;
+                padding: 30px;
+                border-radius: 6px;
+                display:flex;
+                align-items: center;
+                border:2px solid #fff;
+                position: relative;
+                z-index: 1;
+                &:before{
+                    position: absolute;
+                    content: '';
+                    width:0;
+                    height: 0;
+                    left: 50%;
+                    top: 50%;
+                    z-index: -1;
+                    transition: var(--main-transition);
+                    background-color: #ededed;
+                    transform: translate(-50%,-50%);
+
+                }
+                &:hover{
+                    &:before{
+                        width: 100%;
+                        height: 100%;
+                        
+                    }
+                }
+                img{
+                    @media(max-width:991px)
+                    {
+                        margin:0 0 30px;
+                    }        
+                   width: 64px;
+                   margin-right:100px ;
+                }
+                .text{
+                    h3{
+                        margin: 0;
+                        font-size: 22px;
+                    }
+                    p{
+                        margin:10px 0 0 ;
+                        color: #777;
+                        line-height: 1.7;
+                        font-size: 18px;
+
+                    }
+                }
+
+            }
+        }
+    }
+}

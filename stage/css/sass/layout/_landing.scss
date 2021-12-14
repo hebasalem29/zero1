@@ -1,0 +1,90 @@
+.art
+{
+    position: relative;
+    .ll{
+        position: relative;
+    text-align: center;
+    display: block;
+    animation: bounce 1.5s linear infinite;
+    }
+    .fl{
+       overflow: hidden;
+       
+        padding-bottom: 120px;
+        display: flex;
+      //  justify-content: space-between;
+        align-items: center;
+       // position: relative;
+     .image{
+         img{
+            width: 600px;
+             @media(max-width:991px)
+             {
+                 display: none;
+             }
+         position: relative;
+         animation: up-and-down 5s linear infinite;
+         }
+       
+     }
+     .text{
+         p{
+            font-size: 23px;
+            line-height: 1.7;
+            margin: 5px 0 0;
+            color: #666;
+            max-width: 500px;
+         }
+         font-size: 40px;
+         margin: 0;
+    letter-spacing: -2px;
+         //padding: 100px;
+         flex: 1;
+        // white-space: nowrap;
+        @media(max-width:991px)
+        {
+           text-align: center;
+           margin: 0 auto;
+           padding: 100px;
+        }
+
+     }
+        
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #ececec;
+        transform: skewY(-6deg);
+        transform-origin: top left;
+
+    }
+  
+
+}
+@keyframes up-and-down {
+    0%,
+    100% {
+       top:0;
+
+   }
+   50%{
+       top:-30px;
+   }
+   
+}
+@keyframes bounce {
+    0%,50%,80%,60%,
+    100% {
+       top:0;
+
+   }
+   20%{
+       top:-50px;
+   }
+}

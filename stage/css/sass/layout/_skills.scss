@@ -1,0 +1,52 @@
+.our-skills
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #fff;
+    .container4{
+        @media(max-width:991px)
+        {
+            img{
+                display: none;
+            }
+        }
+        display: flex;
+        align-items: center;
+        .skills{
+            flex: 1;
+            .skill{
+                h3{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        font-size: 12px;
+                        border: 1px solid #ccc;
+                        padding: 3px 5px ;
+                        border-radius: 4px;
+                        color: var(--main-color);
+
+                    }
+
+                }
+                .the-progress{
+                    height: 30px;
+                    background-color: #eee;
+                    position: relative;
+                    span{
+                        background-color: var(--main-color);
+                        position: absolute;
+                        height: 100%;
+                        
+
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+}

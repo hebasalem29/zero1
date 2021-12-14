@@ -1,0 +1,105 @@
+.test
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #ececec;
+ 
+    .container3{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap:40px;
+        .box{
+            .title{
+                margin-bottom: 10px;
+                display: block;color: #777;
+            }
+            h3{
+                margin: 0 0 10px;
+                color: var(--main-color);
+            }
+            padding: 20px;
+            background-color: #fff;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0 0 0/7%);
+            img{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: -10px;
+                top:-50px;
+                border-radius: 50%;
+                border: 10px solid #ececec;
+
+            }
+            h3{
+
+            }
+            .rate{
+
+            }
+            .filled{
+                color: #ffc107;
+
+            }
+            p{
+                line-height: 1.5;
+                color: #777;
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+        }
+    }
+} .main-title{
+        
+    margin: 0 auto 80px;
+    text-align: center;
+    
+    border: 3px solid #000;
+    padding: 10px 20px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+    &:before
+    {
+        content:'';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        left: -30px;
+        top:50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: #2196f3;
+    }
+    &:after
+    {
+        content:'';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        right: -30px;
+        top:50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: #2196f3;
+    }
+    &:hover::before
+    {
+        z-index: -1;
+        animation: left-move .5s forwards;
+    }
+    &:hover::after
+    {
+        z-index: -1;
+        animation: right-move .5s forwards;
+    }
+    &:hover{
+        border: 1px solid #fff;
+        color: #fff;
+        transition-delay: .5s;
+    }
+    
+        }

@@ -1,0 +1,61 @@
+.gallery{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #ececec;
+
+    .container3{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap:40px;
+        .box{
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0px 12px 20px 0px rgba(0 0 0 /13%),0px 2px 4px 0px rgba(0 0 0 /12%);
+            .image2{
+                overflow: hidden;
+                position: relative;
+                img{
+                   
+                    
+                max-width: 100%;
+                transition: var(--main-transition);
+                
+    
+                    
+                }
+                &:hover img{
+                    transform: rotate(5deg) scale(1.1);
+
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    background-color:rgba(255 255 255 /20%) ;
+                    width: 0px;
+                    height: 0px;
+                    opacity: 0;
+                    z-index: 2;
+                }
+                &:hover::before{
+                   // opacity: 1;
+                    animation: flashing .7s;
+                }
+            }
+        }
+    }
+}
+@keyframes flashing {
+    0%,40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+    
+}

@@ -1,0 +1,72 @@
+.vidios{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: #fff;
+    .container{
+        .holder{
+            @media(max-width:991px)
+            {
+                flex-direction: column;
+            }
+            display: flex;
+            justify-content: center;
+            background-color: #ececec;
+            border: 1px solid #ddd;
+            .list{
+                min-width: 300px;
+                background-color: #fff;
+
+                .name{
+                    display:flex;
+                    justify-content: space-between;
+                    padding: 20px;
+                    background-color: #f4f4f4;
+                    font-weight: bold;
+
+
+
+                }
+                ul{
+                    li{
+                        padding: 15px;
+                        border-top: 1px solid #ececec;
+                        cursor: pointer;
+                        transition: var(--main-transition);
+
+                        span{
+                            display: block;
+                            margin-top: 10px;
+                            color: #777;
+
+                        }
+                        &:hover{
+                            background-color: #fafafa;
+                            color: var(--main-color);
+                        }
+                    }
+                }
+            }
+                .preview{
+                    background-color: E2E2E2;
+                    padding: 10PX;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    img{
+                        max-width: 100%;
+
+
+                    }
+                    .info{
+                        padding: 20px;
+                        margin-top: 10px;
+                        background-color: #fff;
+
+                    }
+                }
+
+            }
+        }
+    
+}
